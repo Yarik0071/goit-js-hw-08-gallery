@@ -39,9 +39,17 @@ function openModal(e) {
 }
 
 closeBtn.addEventListener("click", closeModal)
-closeClick.addEventListener("click", closeModal)
+closeClick.addEventListener("click",closeModalII) 
 
 function closeModal(e) {
   modal.classList.remove("is-open")
   modalImage.removeAttribute("src")
+}
+
+function closeModalII(e){
+  if(e.currentTarget === e.target){
+    closeModal()
+  } else {
+    return;
+  }
 }
